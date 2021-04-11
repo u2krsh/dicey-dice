@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=RocknRoll+One&display=swap');
+
+:root {
+  --main-col: #393842;
+}
+
+body {
+  font-size: 20px;
+  background-color: var(--main-col);
+  color: white;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 80px;
+}
+
+.title h1 {
+  font-family: 'Dela Gothic One', cursive;
+  line-height: 2;
+  letter-spacing: 10px;
+  margin: 20px 0px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.title p {
+  font-family: 'Dela Gothic One', cursive;
+  font-size: 20px;
+  margin: 0px;
+  color: cyan;
+  letter-spacing: 5px;
+}
+
+.player-section {
+  font-family: 'RocknRoll One', sans-serif;
+}
+
+.player-section img {
+  width: 100px;
+  height: auto;
+  color: cyan;
+}
+
+.player-section .player-1 {
+  margin: 0 30px;
+  display: inline-block;
+}
+
+.player-section .player-2 {
+  margin: 0 15px;
+  display: inline-block;
+}
+
+.player-section .btn {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .player-section .player-1 {
+    margin: 0px;
+    padding-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .player-section .player-2 {
+    margin: 0px;
+    padding-left: 10px;
+  }
+}
+
+.btn {
+  font-family: Hack, monospace;
+  background: #d3d3d3;
+  color: #2c2c2c;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 1.5rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+  width: 150px;
+  position: relative;
+  max-width: 250px;
+  outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .btn {
+    width: inherit;
+    font-size: 15px;
+  }
+}
+
+
+.btn:hover {
+  background: cyan;
+  transition: all 0.5s;
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px white;
+  color: black;
+}
+
+.btn::after {
+  opacity: 1;
+  transition: all 0.5s;
+  color: #ffffff;
+}
+
+#footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+#footer p{
+  font-family: Hack, monospace;
+  font-size: 20px;
+}
+
+#footer a {
+  color: cyan;
+  text-decoration: none;
+  transition: 0.8s;
+}
+
+#footer a:hover {
+  color: white;
+  text-decoration: underline;
+  transition: 0.8s;
+}
