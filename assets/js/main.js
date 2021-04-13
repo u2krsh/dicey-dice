@@ -1,29 +1,15 @@
+document.getElementById('btn1').addEventListener("click", function(){
+  var audio = new Audio ("assets/sound.mp3"); // Directory of the audio.
+  audio.play(); // Calling the function.
+});
 
-var randomNumber1 = Math.floor(Math.random() * 6) + 1; //1-6
+document.getElementById('btn1').addEventListener("click", function(){
+  var randomNumber = Math.floor(6*Math.random())+1;   // To generate a random number (b/w 0 - 0.99) and then multiplying the resultant with 6
+  var randomImage = randomNumber + ".png"; // To point at the picture (For example: 1.png to 6.png).
+  var randomImageSource = "assets/img/" + randomImage; // To point at image with its directory i.e source.
 
-var randomDiceImage = randomNumber1 + ".png"; //dice1.png - dice6.png
+  var images = document.querySelectorAll("img")[0];
+  images.setAttribute("src", randomImageSource);
 
-var randomImageSource = "assets/img/" + randomDiceImage; //images/dice1.png - images/dice6.png
-
-var image1 = document.querySelectorAll("img")[0];
-
-image1.setAttribute("src", randomImageSource);
-
-
-var randomNumber2 = Math.floor(Math.random() * 6) + 1;
-
-var randomImageSource2 = "assets/img/" + randomNumber2 + ".png";
-
-document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
-
-
-//If player 1 wins
-if (randomNumber1 > randomNumber2) {
-  document.querySelector("p").innerHTML = "🚩 Play 1 Wins!";
-}
-else if (randomNumber2 > randomNumber1) {
-  document.querySelector("p").innerHTML = "Player 2 Wins! 🚩";
-}
-else {
-  document.querySelector("p").innerHTML = "Draw!";
-}
+  document.querySelector("h3").innerHTML = "You rolled a " + randomNumber;
+});
